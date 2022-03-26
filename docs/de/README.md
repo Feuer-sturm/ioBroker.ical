@@ -1,7 +1,7 @@
 ![Logo](ical.png)
 # ioBroker iCal Adapter
 Mit diesem Adapter können .ics-Dateien von einer bestimmten URL gelesen und analysiert werden (Google Kalender oder iCal).
-Alternativ ist es möglich, eine lokale ".ics" -Datei zu verwenden (verwenden Sie den absoluten Pfad zur Datei anstelle der URL)
+Alternativ ist es möglich, eine lokale ".ics" -Datei zu verwenden (verwende den absoluten Pfad zur Datei anstelle der URL)
 ## Verwendung
 Basierend auf iCal Adapter für (CCU.IO) [https://github.com/hobbyquaker/ccu.io/tree/master/adapter/ical] von vader722
 
@@ -34,12 +34,12 @@ Dazu in den Settings mit der Variablen runEveryMinutes das Abfrageintervall (in 
 Erklärung zu den States unter ical.0.data und ical.0.events 
 
 
-- `ical.0.data.count`:
-- `ical.0.data.countTomorrow`:
-- `ical.0.data.countYesterday`:
-- `ical.0.data.html`:
-- `ical.0.data.table`:
-- `ical.0.data.text`:
+- `ical.0.data.count`: Anzahl der Termine heute
+- `ical.0.data.countTomorrow`: Anzahl der Termine morgen
+- `ical.0.data.countYesterday`: Anzahl der Termine gestern
+- `ical.0.data.html`: ical Termine als HTML Tabelle
+- `ical.0.data.table`: ical Termine mit allen Rohwerten als JSON
+- `ical.0.data.text`: ical Termine als Text Tabelle
 
 - `ical.0.events.0.later`:  Das Event im Pfad ical.0.events.0.later wird auf true gesetzt, wenn es heute noch stattfindet aber noch nicht begonnen ist
 - `ical.0.events.0.now`: Das Event im Pfad ical.0.events.0.now wird auf true gesetzt, wenn es aktuell aktiv ist
@@ -49,12 +49,12 @@ Erklärung zu den States unter ical.0.data und ical.0.events
 
 
 # Einstellungen ical Adapter
-- `runEveryMinutes`: 30 bedeutet dass der Adapter automatisch alle 30min den Kalender neu einliesst. Bei 0 wird nicht automatisch eingelesen
+Der ical Adapter ist ein zeitgesteuerter Adapter. Unter dem Menü "Instanzen" -> ical.x wird bei der Zeitplanung der Instanz festgelegt, in welchem Zyklus der Adapter gestartet wird und die hinterlegten Kalender ausliest. "0 * * * *" entspricht z.B. "Jede 0 Minute jede Stunde" 
 
 ## Haupteinstellungen
-- `preview`: 7 heisst, dass Termine 7 Tage im voraus angezeigt werden
-- `Vergangene Tage`: 
-- `Groß-/Kleinschreibung bei Eventsuche`:
+- `Tagesvorschau`: 7 heisst, dass Termine 7 Tage im voraus angezeigt werden
+- `Vergangene Tage`: Angabe in Anzahl an Tagen , die Rückwirkend angezeigt werden sollen (Default Einstellung 0 Tage)
+- `Groß-/Kleinschreibung bei Eventsuche ignorieren`: Wenn diese Option aktiviert ist, wird die Groß- und Kleinschreibung bei der Eventssuche ignoriert
 
 ## HTML Einstellungen
 - `Sprache`: 
