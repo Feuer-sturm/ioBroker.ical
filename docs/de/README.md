@@ -57,17 +57,18 @@ Der ical Adapter ist ein zeitgesteuerter Adapter. Unter dem Menü "Instanzen" ->
 - `Groß-/Kleinschreibung bei Eventsuche ignorieren`: Wenn diese Option aktiviert ist, wird die Groß- und Kleinschreibung bei der Eventssuche ignoriert
 
 ## HTML Einstellungen
-- `Sprache`: 
+- `Sprache`: Diese Sprachauswahl stellt für die Option `Ersetze Datum mit Worten` die gewünschte Anzeigesprache ein
 - `Ersetze 00:00 mit`: Legt fest durch welchen String bei ganztägigen Terminen die Uhrzeit 00:00 ersetzt wird. Bei Leerzeichen (zwischen den Hochkommas) wird dir Uhrzeit bei ganztägigen Terminen weggelassen
 - `Standardfarben für HTML`: `white` legt die Standardfarbe der Kalendereinträge fest
-- `Datumsangaben mit führender 0`:
-- `Ersetze Datum mit Worten`: true Bei true wird bei heutigen Terminen das heutige Datum durch den String todayString ersetzt (z.B. "Heute"). Bei morgigen Terminen durch den String tomorrowString
+- `Datumsangaben mit führender 0`: Wenn diese Option aktiviert ist, wird bei einstelligen Datumsangaben eine 0 vorrangestellt
+- `Ersetze Datum mit Worten`: Wenn diese Option aktiviert ist, wird bei heutigen Terminen das heutige Datum durch den Wert "Heute" ersetzt. Analog wird der Wert "Morgen" und "Übermorgen" für die Termine in den nächsten Tagen angezeigt. 
 - `Jeder Kalender hat eine eigene Farbe`: false Bei true wird bei mehreren Kalendern jeder Kalender in einer festzulegenden Farbe eingefärbt. Ist die Option "Benutze Farben für HTML" aktiviert, funktioniert dies nicht!
-- `Benutze Farben für HTML`: true Termine am heutigen Tag sowie aktuell laufende Termine werden rot gefärbt, Termine am morgigen Tag orange, diese Option überstimmt die Option everyCalOneColor
-- `Start- und Endzeit verbergen`:
-- `Jahr verbergen`:
-- `Pfeil für gestartete Ereignisse hinzufügen`:
-- `Ereignisfarbe als Box verwenden, falls verfügbar`:
+- `Benutze Farben für HTML`: Wenn diese Option aktiviert ist, werden Termine am heutigen Tag sowie aktuell laufende Termine werden Rot gefärbt, Termine am morgigen Tag Orange und Termine übermorgen Gelb dargestellt
+- `Start- und Endzeit verbergen`: Wenn diese Option aktiviert ist, wird die Start- und die Endzeit von einem Termin nicht angezeigt
+- `Jahr verbergen`: Wenn diese Option aktiviert ist, wird die aktuelle Jahreszahl im Termin nicht angezeigt
+- `Pfeil für gestartete Ereignisse hinzufügen`: Wenn diese Option aktiviert ist, wird ein Pfeil vor einem Termin angezeigt, wenn dieser bereits gestartet ist
+- `Ereignisfarbe als Box verwenden, falls verfügbar`: Wenn diese Option aktiviert ist, wird eine farbige Kachel vor dem Termin angezeigt, welche die im Konfigurationsreiter "Kalender" hinterlegte Farbe darstellt
+
 
 Durch Anpassen der CSS im VIS können die Styles von heutigen (Standard rot) und morgigen Terminen (Standard Orange) festegelegt werden: 
 - `iCalWarn` - Zeilenanfang Kalendereintrag heute
@@ -77,10 +78,8 @@ Durch Anpassen der CSS im VIS können die Styles von heutigen (Standard rot) und
 
 
 ## Kalender
-- `Calendar1`: 
 
-     
-  Es können beliebig viele Kalender eingetragen werden. Im Standard Konfigfile sind 2 Kalender eingetragen.
+Es können beliebig viele Kalender eingetragen werden. Im Standard Konfigfile sind 2 Kalender eingetragen.
 
 ### Kalender URL oder Dateiname
  - `calURL`: "http://11111.ics", URL des Kalenders 
